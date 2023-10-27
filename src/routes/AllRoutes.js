@@ -1,6 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
 import { ProductList, ProductDetail, Search, PageNotFound } from '../pages';
-
 export const AllRoutes = () => {
   return (
     <>
