@@ -3,7 +3,7 @@ import { Card } from '../components';
 export const ProductList = () => {
   return (
     <main>
-      <div className="text-2xl bg-sky-200">
+      <div className="text-2xl bg-sky-900">
         <Card />
         <Card />
         <Card />

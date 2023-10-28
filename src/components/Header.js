@@ -1,23 +1,24 @@
+import { Link, NavLink } from 'react-router-dom';
 import Logo from '../assets/images/logo.png';
 import Cart from '../assets/images/heart cart icon.png';
 
 export const Header = () => {
   return (
     <header>
-      <nav className="bg-white border-gray-200 dark:bg-gray-900">
+      <nav className="flex items-center   bg-white border-gray-200 dark:bg-gray-900 ">
         <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
-          <a
-            href="#"
-            className="flex items-center"
+          <Link
+            to="/"
+            className="flex items-center "
           >
             <img
               src={Logo}
-              className="h-40 w-40 mr-5"
+              className="h-40 w-40 "
               alt="Shopaholic-U Logo"
             />
-          </a>
-          <div className="flex items-center">
-            <form>
+          </Link>
+          <div className="flex items-center ">
+            <form className="ml-10">
               <div className="flex">
                 <label
                   htmlFor="search-dropdown"
@@ -123,62 +124,56 @@ export const Header = () => {
               </div>
             </form>
 
-            <a
-              href="tel:5541251234"
-              className="mr-6 text-sm  text-gray-500 dark:text-white hover:underline"
-            >
-              (555) 412-1234
-            </a>
-            <a
-              href="#"
-              className="text-sm  text-blue-600 dark:text-blue-500 hover:underline"
+            <Link
+              to="#"
+              className="ml-20 text-sm  text-blue-600 dark:text-blue-500 hover:underline "
             >
               Login
-            </a>
+            </Link>
             <img
               src={Cart}
               className="h-20 w-25 mr-5"
-              alt="Shopaholic-U Logo"
+              alt="Shopaholic-U Cart"
             />
           </div>
         </div>
       </nav>
-      <nav className="bg-gray-50 dark:bg-gray-700">
+      <nav className="flex items-center bg-gray-50 dark:bg-gray-700">
         <div className="max-w-screen-xl px-4 py-3 mx-auto">
           <div className="flex items-center">
             <ul className="flex flex-row font-medium mt-0 mr-6 space-x-8 text-sm">
               <li>
-                <a
-                  href="#"
+                <Link
+                  to="#"
                   className="text-gray-900 dark:text-white hover:underline"
                   aria-current="page"
                 >
                   Home
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  to="#"
                   className="text-gray-900 dark:text-white hover:underline"
                 >
                   Company
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  to="#"
                   className="text-gray-900 dark:text-white hover:underline"
                 >
                   Team
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  to="#"
                   className="text-gray-900 dark:text-white hover:underline"
                 >
-                  Features
-                </a>
+                  Contact Us
+                </Link>
               </li>
             </ul>
           </div>
