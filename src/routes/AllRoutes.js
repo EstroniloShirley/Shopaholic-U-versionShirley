@@ -1,29 +1,46 @@
 import { Routes, Route } from 'react-router-dom';
-import { ProductList, ProductDetail, Search, PageNotFound } from '../pages';
+import {
+  Products,
+  ProductList,
+  ProductDetail,
+  Search,
+  PageNotFound,
+  Categories,
+} from '../pages';
+
 export const AllRoutes = () => {
   return (
-    <>
+    <div>
       <Routes>
         <Route
           path=""
           element={<ProductList />}
         />
+        {/* <Route
+          path="/"
+          element={<Categories />}
+        /> */}
+        {/* <Route
+          path=""
+          element={<Products />}
+        /> */}
         <Route
-          path="movie/:id"
+          path="products/:id"
+          element={<ProductList />}
+        />
+        <Route
+          path="products/:id"
           element={<ProductDetail />}
         />
         <Route
-          path="movies/popular"
+          path="products/title"
           element={<ProductList />}
         />
         <Route
-          path="movies/top"
-          element={<ProductList />}
+          path="products/detail"
+          element={<ProductDetail />}
         />
-        <Route
-          path="movies/upcoming"
-          element={<ProductList />}
-        />
+
         <Route
           path="search"
           element={<Search />}
@@ -33,6 +50,6 @@ export const AllRoutes = () => {
           element={<PageNotFound />}
         />
       </Routes>
-    </>
+    </div>
   );
 };

@@ -1,13 +1,20 @@
+import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import Logo from '../assets/images/logo.png';
 import Cart from '../assets/images/heart cart icon.png';
 
 export const Header = () => {
+  const activeClass =
+    'text-gray-900 dark:text-pink-300 hover:text-white mr-5 border-blue-900 hover:bg-pink-600 activ';
+
+  const inActiveClass =
+    'text-gray-900 dark:text-pink-300 hover:text-white mr-5 border-blue-900 hover:bg-pink-600';
+  const { hidden, setHidden } = useState(true);
   return (
     <header>
       <nav className="flex items-center   bg-white border-gray-200 dark:bg-gray-900 ">
         <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
-          <Link
+          <NavLink
             to="/"
             className="flex items-center "
           >
@@ -16,7 +23,7 @@ export const Header = () => {
               className="h-40 w-40 "
               alt="Shopaholic-U Logo"
             />
-          </Link>
+          </NavLink>
           <div className="flex items-center ">
             <form className="ml-10">
               <div className="flex">
@@ -27,6 +34,7 @@ export const Header = () => {
                   Your Email
                 </label>
                 <button
+                  onClick={() => setHidden(!hidden)}
                   id="dropdown-button"
                   data-dropdown-toggle="dropdown"
                   className="flex-shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-l-lg hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 dark:text-white dark:border-gray-600"
@@ -51,7 +59,9 @@ export const Header = () => {
                 </button>
                 <div
                   id="dropdown"
-                  className="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
+                  className={`${
+                    hidden ? 'setHidden' : ''
+                  }}z-10 bg-white divide-y hidden divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700`}
                 >
                   <ul
                     className="py-2 text-sm text-gray-700 dark:text-gray-200"
@@ -97,7 +107,7 @@ export const Header = () => {
                     id="search-dropdown"
                     className="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-r-lg border-l-gray-50 border-l-2 border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-l-gray-700  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-blue-500"
                     placeholder="Search Mockups, Logos, Design Templates..."
-                    required
+                    autoComplete="off"
                   />
                   <button
                     type="submit"
@@ -124,12 +134,12 @@ export const Header = () => {
               </div>
             </form>
 
-            <Link
+            <NavLink
               to="#"
               className="ml-20 text-sm  text-blue-600 dark:text-blue-500 hover:underline "
             >
               Login
-            </Link>
+            </NavLink>
             <img
               src={Cart}
               className="h-20 w-25 mr-5"
@@ -143,37 +153,45 @@ export const Header = () => {
           <div className="flex items-center">
             <ul className="flex flex-row font-medium mt-0 mr-6 space-x-8 text-sm">
               <li>
-                <Link
+                <NavLink
                   to="#"
-                  className="text-gray-900 dark:text-white hover:underline"
-                  aria-current="page"
+                  className={({ isActive }) =>
+                    isActive ? activeClass : inActiveClass
+                  }
+                  end
                 >
                   Home
-                </Link>
+                </NavLink>
               </li>
               <li>
-                <Link
+                <NavLink
                   to="#"
-                  className="text-gray-900 dark:text-white hover:underline"
+                  className={({ isActive }) =>
+                    isActive ? activeClass : inActiveClass
+                  }
                 >
                   Company
-                </Link>
+                </NavLink>
               </li>
               <li>
-                <Link
+                <NavLink
                   to="#"
-                  className="text-gray-900 dark:text-white hover:underline"
+                  className={({ isActive }) =>
+                    isActive ? activeClass : inActiveClass
+                  }
                 >
                   Team
-                </Link>
+                </NavLink>
               </li>
               <li>
-                <Link
+                <NavLink
                   to="#"
-                  className="text-gray-900 dark:text-white hover:underline"
+                  className={({ isActive }) =>
+                    isActive ? activeClass : inActiveClass
+                  }
                 >
                   Contact Us
-                </Link>
+                </NavLink>
               </li>
             </ul>
           </div>
