@@ -13,7 +13,7 @@ export const ProductList = () => {
   const getProducts = async () => {
     const response = await fetch('https://fakestoreapi.com/products');
     setProducts(await response.json(products));
-    console.log(response);
+    // console.log(response);
 
     setFilter(products);
   };
