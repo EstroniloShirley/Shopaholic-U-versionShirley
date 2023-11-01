@@ -1,6 +1,6 @@
 export { Products } from './Products';
-export { Categories } from './Categories';
-export { ProductList } from './ProductList';
+export { Home } from './Home';
+export { Carousel } from './Carousel';
 export { ProductDetail } from './ProductDetails';
 export { Search } from './Search';
 

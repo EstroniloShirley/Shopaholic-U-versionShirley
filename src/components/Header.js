@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { Link, NavLink } from 'react-router-dom';
-import Logo from '../assets/images/logo.png';
+import { NavLink } from 'react-router-dom';
+import Logo from '../assets/images/logo.jpg';
 import Cart from '../assets/images/heart cart icon.png';
 
 export const Header = () => {
@@ -10,22 +10,26 @@ export const Header = () => {
   const inActiveClass =
     'text-gray-900 dark:text-pink-300 hover:text-white mr-5 border-blue-900 hover:bg-pink-600';
   const { hidden, setHidden } = useState(true);
+
   return (
     <header>
-      <nav className="flex items-center   bg-white border-gray-200 dark:bg-gray-900 ">
-        <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
+      <nav className="fixed top-0 z-50 w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700">
+        <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl ">
           <NavLink
             to="/"
-            className="flex items-center "
+            className="flex ml-10 "
           >
             <img
               src={Logo}
-              className="h-40 w-40 "
+              className="h-8 "
               alt="Shopaholic-U Logo"
             />
+            <span className="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap dark:text-white">
+              Shopaholic-U
+            </span>
           </NavLink>
           <div className="flex items-center ">
-            <form className="ml-10">
+            {/* <form className="ml-10">
               <div className="flex">
                 <label
                   htmlFor="search-dropdown"
@@ -132,70 +136,70 @@ export const Header = () => {
                   </button>
                 </div>
               </div>
-            </form>
+            </form> */}
+
+            <div className="flex items-center">
+              <ul className="flex flex-row font-medium mt-0 mr-6 space-x-8 text-sm">
+                <li>
+                  <NavLink
+                    to="/"
+                    className={({ isActive }) =>
+                      isActive ? activeClass : inActiveClass
+                    }
+                    end
+                  >
+                    Home
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    to="/about"
+                    className={({ isActive }) =>
+                      isActive ? activeClass : inActiveClass
+                    }
+                  >
+                    About
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    to="/products"
+                    className={({ isActive }) =>
+                      isActive ? activeClass : inActiveClass
+                    }
+                  >
+                    Products
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    to="/contact"
+                    className={({ isActive }) =>
+                      isActive ? activeClass : inActiveClass
+                    }
+                  >
+                    Contact Us
+                  </NavLink>
+                </li>
+              </ul>
+            </div>
 
             <NavLink
               to="#"
-              className="ml-20 text-sm  text-blue-600 dark:text-blue-500 hover:underline "
+              className="ml-20 text-m  text-blue-600 dark:text-blue-500 hover:underline "
             >
               Login
             </NavLink>
             <img
               src={Cart}
-              className="h-20 w-25 mr-5"
+              className=" w-14 mr-5"
               alt="Shopaholic-U Cart"
             />
           </div>
         </div>
       </nav>
       <nav className="flex items-center bg-gray-50 dark:bg-gray-700">
-        <div className="max-w-screen-xl px-4 py-3 mx-auto">
-          <div className="flex items-center">
-            <ul className="flex flex-row font-medium mt-0 mr-6 space-x-8 text-sm">
-              <li>
-                <NavLink
-                  to="#"
-                  className={({ isActive }) =>
-                    isActive ? activeClass : inActiveClass
-                  }
-                  end
-                >
-                  Home
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  to="#"
-                  className={({ isActive }) =>
-                    isActive ? activeClass : inActiveClass
-                  }
-                >
-                  Company
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  to="#"
-                  className={({ isActive }) =>
-                    isActive ? activeClass : inActiveClass
-                  }
-                >
-                  Team
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  to="#"
-                  className={({ isActive }) =>
-                    isActive ? activeClass : inActiveClass
-                  }
-                >
-                  Contact Us
-                </NavLink>
-              </li>
-            </ul>
-          </div>
-        </div>
+        <div className="max-w-screen-xl px-4 py-3 mx-auto"></div>
       </nav>
     </header>
   );

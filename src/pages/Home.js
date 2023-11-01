@@ -2,9 +2,9 @@ import { useState, useEffect } from 'react';
 
 import { Card } from '../components';
 
-export const ProductList = () => {
+export const Home = () => {
   const [products, setProducts] = useState([]);
-  const [filter, setFilter] = useState(products);
+  const [setFilter] = useState(products);
 
   useEffect(() => {
     getProducts();
@@ -13,20 +13,13 @@ export const ProductList = () => {
   const getProducts = async () => {
     const response = await fetch('https://fakestoreapi.com/products');
     setProducts(await response.json(products));
-    // console.log(response);
-
-    setFilter(products);
-  };
-
-  const filterProduct = (items) => {
-    const updatedItems = products.filter((item) => item.products === items);
-    // setFilter(updatedItems);
-    console.log(updatedItems);
+    console.log(response);
   };
 
   return (
     <main>
       <section className="max-w-7x1 mx-auto py-7">
+        <h1 className="text-4xl	">Flash Sale</h1>
         <div className="flex justify-start flex-wrap bg-sky-900 other:justify-evenly">
           {products.map((data) => (
             <Card

@@ -1,11 +1,12 @@
 import { Routes, Route } from 'react-router-dom';
+
 import {
+  Carousel,
   Products,
-  ProductList,
+  Home,
   ProductDetail,
   Search,
   PageNotFound,
-  Categories,
 } from '../pages';
 
 export const AllRoutes = () => {
@@ -14,28 +15,19 @@ export const AllRoutes = () => {
       <Routes>
         <Route
           path=""
-          element={<ProductList />}
+          element={<Home />}
         />
-        {/* <Route
-          path="/"
-          element={<Categories />}
-        /> */}
-        {/* <Route
-          path=""
-          element={<Products />}
-        /> */}
+
         <Route
-          path="products/:id"
-          element={<ProductList />}
+          path="/Products"
+          element={<Products />}
         />
+
         <Route
           path="products/:id"
           element={<ProductDetail />}
         />
-        <Route
-          path="products/title"
-          element={<ProductList />}
-        />
+
         <Route
           path="products/detail"
           element={<ProductDetail />}

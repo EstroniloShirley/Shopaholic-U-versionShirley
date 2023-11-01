@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 // import Backup from '../assets/images/Page Not Found.jpg';
 
@@ -6,13 +5,13 @@ export const Card = ({ data }) => {
   const { id, title, price, description, category, image, rate } = data;
 
   return (
-    <div className="p-2">
+    <div className="p-2 flex flex-wrap">
       <div className=" max-w-sm bg-white border border-gray-200 rounded-lg shadow bg-gray-200 border-gray-700">
         <Link to={`/data/${id}`}>
           <img
-            className="p-8 rounded-t-lg"
+            className="p-8 rounded-t-lg 	"
             src={image}
-            alt="Product Image"
+            alt="ProductImage"
           />
         </Link>
         <div className="px-5 pb-5">
