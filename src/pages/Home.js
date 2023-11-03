@@ -12,7 +12,7 @@ export const Home = () => {
   }, []);
 
   const getProducts = async () => {
-    const response = await fetch('https://fakestoreapi.com/products?limit=4');
+    const response = await fetch('https://fakestoreapi.com/products');
     setProducts(await response.json(products));
     console.log(response);
   };
@@ -33,7 +33,6 @@ export const Home = () => {
               data={data}
             />
           ))}
-          {/* <Card /> */}
         </div>
       </section>
     </main>

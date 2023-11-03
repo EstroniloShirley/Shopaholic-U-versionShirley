@@ -1,7 +1,6 @@
 import { AllRoutes } from './routes/AllRoutes';
-import { Header, Footer, Categorized } from './components';
+import { Header, Footer, NavBar, BestSeller } from './components';
 import { Hero } from './pages';
-import { NavBar } from './components/NavBar';
 import './App.css';
 
 function App() {
@@ -10,7 +9,7 @@ function App() {
       <Header />
       <Hero />
       <NavBar />
-      <Categorized />
+      <BestSeller />
       <AllRoutes />
       <Footer />
     </div>

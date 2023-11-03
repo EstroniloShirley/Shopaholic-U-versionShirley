@@ -1,23 +1,9 @@
-import { useEffect, useState } from 'react';
+import React from 'react';
 
 export const Search = () => {
-  const [search, setSearch] = useState('');
-  const [data, setData] = useState([]);
-
-  useEffect(() => {
-    searchProducts();
-  }, []);
-
-  const searchProducts = async () => {
-    const response = await fetch('https://fakestoreapi.com/products');
-    setSearch(await response.json(search));
-
-    setSearch(response.data);
-  };
-
   return (
-    <div className="container border">
-      <form>
+    <div>
+      <form className="ml-20 mr-20">
         <label
           htmlFor="default-search"
           className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
@@ -46,7 +32,7 @@ export const Search = () => {
             type="search"
             id="default-search"
             className="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-            placeholder="Search Products, Category..."
+            placeholder="Search Products..."
             required
           />
           <button

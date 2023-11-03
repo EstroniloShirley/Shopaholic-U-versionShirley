@@ -2,4 +2,6 @@ export { Header } from './Header';
 export { Footer } from './Footer';
 
 export { Card } from './Card';
-export { Categorized } from './Categorized';
+
+export { NavBar } from './NavBar';
+export { BestSeller } from './BestSeller';

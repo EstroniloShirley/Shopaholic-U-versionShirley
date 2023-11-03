@@ -1,9 +1,26 @@
+import { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 // import Backup from '../assets/images/Page Not Found.jpg';
 
 export const Card = ({ data }) => {
-  const { id, title, price, description, category, image, rate } = data;
+  const { id, name, price, description, category, image, rate } = data;
+  const params = useParams();
+  const [product, setProduct] = useState([]);
 
+  useEffect(() => {
+    getProduct();
+  }, []);
+  const getProduct = async () => {
+    const response = await fetch(`https://fakestoreapi.com/products/${id}`);
+    setProduct(await response.json());
+    setProduct(data);
+  };
+  const filterProducts = (category) => {
+    const updatedItems = product.filter((item) => item.category === category);
+    console.log(updatedItems);
+    setProduct(updatedItems);
+  };
   return (
     <div className="p-4 mx-3 flex flex-wrap">
       <div className=" max-w-sm bg-white border border-gray-200 rounded-lg shadow bg-gray-200 border-gray-700">
@@ -17,7 +34,7 @@ export const Card = ({ data }) => {
         <div className="px-5 pb-5">
           <Link to={`/data/${id}`}>
             <h5 className="text-xl font-semibold tracking-tight text-gray-900 text-black">
-              {title}
+              {name}
             </h5>
           </Link>
           <div className="flex items-center mt-2.5 mb-5 ">
@@ -76,10 +93,11 @@ export const Card = ({ data }) => {
             </span>
             <Link
               to={`/data/${id}`}
+              onClick={() => console.log(data)}
               className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center bg-blue-800 hover:bg-pink-600 focus:ring-blue-800"
             >
               {' '}
-              Add to cart
+              View Details
             </Link>
           </div>
         </div>
