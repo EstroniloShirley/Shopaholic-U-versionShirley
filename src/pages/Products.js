@@ -1,5 +1,9 @@
-import React from 'react';
+import { NavBar, ProductList } from '../components';
 
 export const Products = () => {
-  return <div>Products</div>;
+  return (
+    <main>
+      <NavBar />
+    </main>
+  );
 };

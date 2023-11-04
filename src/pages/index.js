@@ -5,3 +5,4 @@ export { ProductDetail } from './ProductDetails';
 export { Search } from './Search';
 
 export { PageNotFound } from './PageNotFound';
+export { Contact } from './Contact';

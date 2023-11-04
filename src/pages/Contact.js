@@ -9,7 +9,7 @@ export const Contact = () => {
 
   return (
     <main>
-      <div className="component">Contactssss</div>
+      <div className="component mt-20"></div>
       <Outlet />
       <button onClick={handleSubmit}>Submit Form</button>
     </main>

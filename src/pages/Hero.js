@@ -1,5 +1,5 @@
 import Showcase from '../assets/images/banner.png';
-
+import { NavBar, BestSeller } from '../components';
 export const Hero = () => {
   return (
     <main>
@@ -8,6 +8,10 @@ export const Hero = () => {
         alt=""
         className="self-center w-full		"
       />
+
+      <div>
+        <BestSeller />
+      </div>
     </main>
   );
 };

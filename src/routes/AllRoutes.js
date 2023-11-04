@@ -1,5 +1,4 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
-
 import {
   Hero,
   Products,
@@ -7,8 +6,9 @@ import {
   ProductDetail,
   Search,
   PageNotFound,
+  Contact,
 } from '../pages';
-
+import { ProductList } from '../components';
 export const AllRoutes = () => {
   return (
     <div>
@@ -20,11 +20,15 @@ export const AllRoutes = () => {
 
         <Route
           path="/home"
+          element={<Home />}
+        />
+        <Route
+          path="/home"
           element={<Hero />}
         />
 
         <Route
-          path="/Products"
+          path="/products"
           element={<Products />}
         />
 
@@ -53,6 +57,10 @@ export const AllRoutes = () => {
         <Route
           path="search"
           element={<Search />}
+        />
+        <Route
+          path="contact"
+          element={<Contact />}
         />
         <Route
           path="*"

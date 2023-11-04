@@ -16,7 +16,7 @@ export const Header = () => {
       <nav className="  fixed top-0 z-50 w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700">
         <div className=" flex flex-wrap justify-between items-center mx-auto max-w-screen-xl ">
           <NavLink
-            to="/Home"
+            to="/home"
             className="flex ml-10 "
           >
             <img
@@ -33,7 +33,7 @@ export const Header = () => {
               <ul className="flex flex-row font-medium mt-0 mr-6 space-x-8 text-md text-sky-700 ">
                 <li>
                   <NavLink
-                    to="/Home"
+                    to="/home"
                     className={({ isActive }) =>
                       isActive ? activeClass : inActiveClass
                     }
@@ -76,12 +76,14 @@ export const Header = () => {
             </div>
 
             <NavLink
-              to="#"
-              className="ml-20 text-m  text-blue-600 dark:text-blue-500 hover:underline "
+              to="/login"
+              className="ml-20  font-semibold sm:text-lg whitespace-nowrap dark:text-white hover:text-pink-600 "
             >
               Login
             </NavLink>
+
             <img
+              to="/cart"
               src={Cart}
               className=" w-14 mr-5"
               alt="Shopaholic-U Cart"
