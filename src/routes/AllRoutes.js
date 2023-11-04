@@ -7,6 +7,8 @@ import {
   Search,
   PageNotFound,
   Contact,
+  About,
+  Login,
 } from '../pages';
 import { ProductList } from '../components';
 export const AllRoutes = () => {
@@ -26,6 +28,10 @@ export const AllRoutes = () => {
           path="/home"
           element={<Hero />}
         />
+        <Route
+          path=""
+          element={<ProductList />}
+        />
 
         <Route
           path="/products"
@@ -33,25 +39,21 @@ export const AllRoutes = () => {
         />
 
         <Route
-          path="products/:id"
+          path="/products/:id"
           element={<ProductDetail />}
         />
 
         <Route
-          path="products/detail"
+          path="/products/detail"
           element={<ProductDetail />}
         />
         <Route
-          path="Jewelry"
-          element={<ProductDetail />}
+          path="/about"
+          element={<About />}
         />
         <Route
-          path="products/detail"
-          element={<ProductDetail />}
-        />
-        <Route
-          path="products/detail"
-          element={<ProductDetail />}
+          path="/login"
+          element={<Login />}
         />
 
         <Route

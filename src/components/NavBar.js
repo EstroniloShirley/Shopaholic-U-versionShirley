@@ -25,16 +25,16 @@ export const NavBar = ({ products }) => {
   };
 
   return (
-    <div className=" text-center ">
+    <main className=" text-center ">
       <Search />
-      <h1 className="text-center text-4xl font-extrabold underline-offset-4 leading-relaxed">
+      <h1 className="text-center text-4xl font-extrabold underline-offset-4	mb-5 leading-relaxed">
         Products
       </h1>
       <div className="inline-flex rounded-md shadow-sm">
         <Link
           onClick={() => setFilter(data)}
           aria-current="page"
-          className=" text-sm font-medium text-blue-700 bg-white border border-gray-200 rounded-l-lg hover:bg-gray-100 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white"
+          className="px-4 py-2 text-sm font-medium text-blue-700 bg-white border border-gray-200 rounded-l-lg hover:bg-gray-100 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white"
         >
           All Products
         </Link>
@@ -67,7 +67,7 @@ export const NavBar = ({ products }) => {
           Men's Clothing
         </Link>
       </div>
-      <ProductList />
+
       <section className="container flex flex-wrap max-w-7x1 mx-auto py-7 items-center rounded-lg">
         <div className="flex flex-wrap inline-grid grid-cols-4 gap-4">
           {filter.map((product) => (
@@ -78,6 +78,6 @@ export const NavBar = ({ products }) => {
           ))}
         </div>
       </section>
-    </div>
+    </main>
   );
 };

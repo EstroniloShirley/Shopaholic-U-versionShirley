@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { Card } from '.';
 
-export const ProductList = ({ products }) => {
+import { Card } from './Card';
+
+export const ProductList = () => {
   const [data, setData] = useState([]);
   const [filter, setFilter] = useState(data);
-  const [id, title, category, price] = data;
+
   useEffect(() => {
     getCategorized();
   }, []);

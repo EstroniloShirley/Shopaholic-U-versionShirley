@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-// import Backup from '../assets/images/Page Not Found.jpg';
 
 export const Card = ({ data }) => {
   const { id, name, price, description, category, image, rate } = data;
