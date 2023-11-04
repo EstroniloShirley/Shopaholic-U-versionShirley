@@ -1,15 +1,12 @@
 import { AllRoutes } from './routes/AllRoutes';
-import { Header, Footer, NavBar, BestSeller } from './components';
-import { Hero } from './pages';
+import { Header, Footer } from './components';
+
 import './App.css';
 
 function App() {
   return (
     <div className="App">
       <Header />
-      <Hero />
-      <NavBar />
-      <BestSeller />
       <AllRoutes />
       <Footer />
     </div>

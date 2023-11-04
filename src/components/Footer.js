@@ -18,7 +18,7 @@ export const Footer = () => {
           <li>
             <a
               target="_blank"
-              href="https://tailwindcss.com/"
+              href="https://www.facebook.com/shopaholic.u.2023/"
               className="mr-4 hover:underline md:mr-6"
             >
               About
@@ -28,7 +28,7 @@ export const Footer = () => {
           <li>
             <a
               target="_blank"
-              href="https://tailwindcss.com/"
+              href="https://www.facebook.com/shopaholic.u.2023/"
               className="mr-4 hover:underline md:mr-6"
             >
               Licensing
@@ -37,7 +37,7 @@ export const Footer = () => {
           <li>
             <a
               target="_blank"
-              href="https://tailwindcss.com/"
+              href="https://www.facebook.com/shopaholic.u.2023"
               className="hover:underline"
             >
               Contact
