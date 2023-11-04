@@ -1,7 +1,7 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
 
 import {
-  Carousel,
+  Hero,
   Products,
   Home,
   ProductDetail,
@@ -16,6 +16,11 @@ export const AllRoutes = () => {
         <Route
           path=""
           element={<Home />}
+        />
+
+        <Route
+          path="/home"
+          element={<Hero />}
         />
 
         <Route

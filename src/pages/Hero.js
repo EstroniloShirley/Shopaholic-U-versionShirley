@@ -1,13 +1,13 @@
-import Showcase from '../assets/images/Voucher.png';
+import Showcase from '../assets/images/banner.png';
 
 export const Hero = () => {
   return (
-    <div>
+    <main>
       <img
         src={Showcase}
         alt=""
-        className="self-center mt-8 w-full		"
+        className="self-center w-full		"
       />
-    </div>
+    </main>
   );
 };
