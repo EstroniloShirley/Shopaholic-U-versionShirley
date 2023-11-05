@@ -3,30 +3,17 @@ import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
 export const Card = ({ data }) => {
-  const { id, name, price, description, category, image, rate } = data;
+  const { id, name, price, description, category, image_link, rating } = data;
   const params = useParams();
   const [product, setProduct] = useState([]);
 
-  useEffect(() => {
-    getProduct();
-  }, []);
-  const getProduct = async () => {
-    const response = await fetch(`https://fakestoreapi.com/products/${id}`);
-    setProduct(await response.json());
-    setProduct(data);
-  };
-  const filterProducts = (category) => {
-    const updatedItems = product.filter((item) => item.category === category);
-    console.log(updatedItems);
-    setProduct(updatedItems);
-  };
   return (
     <div className="p-4 mx-3 flex flex-wrap">
       <div className=" max-w-sm bg-white border border-gray-200 rounded-lg shadow bg-gray-200 border-gray-700">
         <Link to={`/data/${id}`}>
           <img
             className="p-8 rounded-t-lg pic"
-            src={image}
+            src={image_link}
             alt="ProductImage"
           />
         </Link>
@@ -83,7 +70,7 @@ export const Card = ({ data }) => {
               <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
             </svg>
             <span className="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded bg-blue-200 text-blue-800 ml-3">
-              {rate}
+              {rating}
             </span>
           </div>
           <div className="flex items-center justify-between">

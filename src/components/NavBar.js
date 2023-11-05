@@ -8,18 +8,19 @@ export const NavBar = ({ products }) => {
   const [filter, setFilter] = useState(data);
   const [id, title, category, price] = data;
   useEffect(() => {
-    getCategorized();
+    getBrand();
   }, []);
-
-  const getCategorized = async () => {
-    const response = await fetch('https://fakestoreapi.com/products');
+  const getBrand = async () => {
+    const response = await fetch(
+      'http://makeup-api.herokuapp.com/api/v1/products.json?brand=nyx'
+    );
     setData(await response.json());
     setFilter(data);
     console.log(data);
   };
 
   const filterProducts = (category) => {
-    const updatedItems = data.filter((item) => item.category === category);
+    const updatedItems = data.filter((item) => item.product_type === category);
     console.log(updatedItems);
     setFilter(updatedItems);
   };
@@ -33,38 +34,66 @@ export const NavBar = ({ products }) => {
       <div className="inline-flex rounded-md shadow-sm">
         <Link
           onClick={() => setFilter(data)}
-          aria-current="page"
           className="px-4 py-2 text-sm font-medium text-blue-700 bg-white border border-gray-200 rounded-l-lg hover:bg-gray-100 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white"
+          end
         >
-          All Products
+          All NYX Products
         </Link>
         <Link
-          onClick={() => filterProducts('electronics')}
+          onClick={() => filterProducts('lipstick')}
           href="#"
           className="px-4 py-2 text-sm font-medium text-gray-900 bg-white border-t border-b border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white"
         >
-          Electronic Items
+          Lipstick
         </Link>
         <Link
-          onClick={() => filterProducts('jewelery')}
+          onClick={() => filterProducts('lip_liner')}
           href="#"
           className="px-4 py-2 text-sm font-medium text-gray-900 bg-white border-t border-b border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white"
         >
-          Jewelry Items
+          Lip Liner
         </Link>
         <Link
-          onClick={() => filterProducts("women's clothing")}
+          onClick={() => filterProducts('mascara')}
           href="#"
           className="px-4 py-2 text-sm font-medium text-gray-900 bg-white border-t border-b border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white"
         >
-          Women's Clothing
+          Mascara
         </Link>
         <Link
-          onClick={() => filterProducts("men's clothing")}
+          onClick={() => filterProducts('eyeshadow')}
           href="#"
-          className="px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-r-md hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white"
+          className="px-4 py-2 text-sm font-medium text-gray-900 bg-white border-t border-b border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white"
         >
-          Men's Clothing
+          Eye Shadow
+        </Link>
+        <Link
+          onClick={() => filterProducts('eyeliner')}
+          href="#"
+          className="px-4 py-2 text-sm font-medium text-gray-900 bg-white border-t border-b border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white"
+        >
+          Eye Liner
+        </Link>
+        <Link
+          onClick={() => filterProducts('bronzer')}
+          href="#"
+          className="px-4 py-2 text-sm font-medium text-gray-900 bg-white border-t border-b border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white"
+        >
+          Bronzer
+        </Link>
+        <Link
+          onClick={() => filterProducts('blush')}
+          href="#"
+          className="px-4 py-2 text-sm font-medium text-gray-900 bg-white border-t border-b border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white"
+        >
+          Blush On
+        </Link>
+        <Link
+          onClick={() => filterProducts('foundation')}
+          href="#"
+          className="px-4 py-2 text-sm font-medium text-gray-900 bg-white border-t border-b border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white"
+        >
+          Foundation{' '}
         </Link>
       </div>
 

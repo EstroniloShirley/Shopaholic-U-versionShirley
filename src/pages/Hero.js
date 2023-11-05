@@ -8,8 +8,8 @@ export const Hero = () => {
         alt=""
         className="self-center w-full		"
       />{' '}
-      <ProductList />
-      <NavBar />
+      {/* <ProductList /> */}
+      {/* <NavBar /> */}
     </main>
   );
 };

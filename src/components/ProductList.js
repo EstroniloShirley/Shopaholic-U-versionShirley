@@ -11,7 +11,9 @@ export const ProductList = () => {
   }, []);
 
   const getCategorized = async () => {
-    const response = await fetch('https://fakestoreapi.com/products');
+    const response = await fetch(
+      'http://makeup-api.herokuapp.com/api/v1/products.json?brand=nyx'
+    );
     setData(await response.json());
     setFilter(data);
     console.log(data);
