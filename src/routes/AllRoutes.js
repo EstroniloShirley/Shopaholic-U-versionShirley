@@ -2,7 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 import {
   Products,
   Home,
-  ProductDetail,
+  ProductDetails,
   Search,
   PageNotFound,
   Contact,
@@ -30,6 +30,10 @@ export const AllRoutes = () => {
         <Route
           path="/products"
           element={<Products />}
+        />
+        <Route
+          path="/data/:id"
+          element={<ProductDetails />}
         />
 
         <Route
