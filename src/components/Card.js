@@ -3,7 +3,16 @@ import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
 export const Card = ({ data }) => {
-  const { id, name, price, description, category, image_link, rating } = data;
+  const {
+    id,
+    name,
+    price,
+    description,
+    category,
+    image_link,
+    rating,
+    product_colors,
+  } = data;
   const params = useParams();
   const [product, setProduct] = useState([]);
 
@@ -23,6 +32,7 @@ export const Card = ({ data }) => {
               {name}
             </h5>
           </Link>
+
           <div className="flex items-center mt-2.5 mb-5 ">
             <svg
               className="w-4 h-4 text-yellow-300 mr-1"

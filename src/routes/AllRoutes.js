@@ -32,6 +32,14 @@ export const AllRoutes = () => {
           path=""
           element={<ProductList />}
         />
+        <Route
+          path="/"
+          element={<ProductList />}
+        />
+        <Route
+          path="home"
+          element={<ProductList />}
+        />
 
         <Route
           path="/products"

@@ -6,7 +6,7 @@ export const Search = () => {
       <form className="ml-20 mr-20">
         <label
           htmlFor="default-search"
-          className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
+          className=" text-sm font-medium text-gray-900 sr-only dark:text-white"
         >
           Search
         </label>
