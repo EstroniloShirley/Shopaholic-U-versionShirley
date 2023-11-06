@@ -27,7 +27,7 @@ export const NavBar = ({ products }) => {
     console.log(updatedItems);
     setFilter(updatedItems);
   };
-  filterProducts();
+
   return (
     <main className=" text-center ">
       <Search />
