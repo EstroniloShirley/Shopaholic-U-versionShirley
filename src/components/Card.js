@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react';
+//eslint-disable-next-line
+eslint - disable - next - line;
 import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 

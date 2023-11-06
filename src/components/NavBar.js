@@ -1,3 +1,6 @@
+//eslint-disable-next-line
+eslint - disable - next - line;
+
 import { useState, useEffect } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { Card } from '../components';

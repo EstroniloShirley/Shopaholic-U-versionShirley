@@ -1,4 +1,4 @@
-import { NavBar, ProductList } from '../components';
+import { NavBar } from '../components';
 import Banner2 from '../assets/images/banner2  nyx.jpg';
 
 export const Products = () => {

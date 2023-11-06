@@ -1,3 +1,6 @@
+//eslint-disable-next-line
+eslint - disable - next - line;
+
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import Logo from '../assets/images/logo.jpg';

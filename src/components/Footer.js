@@ -21,6 +21,7 @@ export const Footer = () => {
                 target="_blank"
                 href="https://www.facebook.com/shopaholic.u.2023/"
                 className="flex flex-wrap mr-4 hover:underline md:mr-6"
+                rel="noreferrer"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -45,6 +46,7 @@ export const Footer = () => {
                 target="_blank"
                 href="https://www.facebook.com/shopaholic.u.2023/"
                 className="flex flex-wrap mr-4 hover:underline md:mr-6"
+                rel="noreferrer"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -64,6 +66,7 @@ export const Footer = () => {
                 target="_blank"
                 href="https://www.facebook.com/shopaholic.u.2023"
                 className=" flex flex-wrap hover:underline md:mr-6"
+                rel="noreferrer"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
