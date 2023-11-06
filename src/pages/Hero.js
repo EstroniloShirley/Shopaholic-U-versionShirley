@@ -1,5 +1,4 @@
 import Showcase from '../assets/images/banner.png';
-import { NavBar, ProductList } from '../components';
 
 export const Hero = () => {
   return (

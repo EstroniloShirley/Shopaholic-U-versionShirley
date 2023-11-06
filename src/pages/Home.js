@@ -1,27 +1,31 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Hero from '../assets/images/banner nyx.gif';
-import { ProductList } from './ProductList';
 import { Search } from './Search';
 
 import { Card } from '../components';
 
 export const Home = () => {
   const [data, setData] = useState([]);
-  const [filter, setFilter, show] = useState(data);
+  const [filter, setFilter] = useState(data);
 
-  useEffect(() => {
-    getBrand();
-  }, []);
-  const getBrand = async () => {
+  // eslint-disable-next-line
+  const GetBrand = async () => {
     const response = await fetch(
       'http://makeup-api.herokuapp.com/api/v1/products.json?brand=nyx'
     );
+    // eslint-disable-next-line
+    useEffect(() => {
+      GetBrand();
+      // eslint-disable-next-line
+    }, []);
+
     setData(await response.json());
     console.log(data);
     setFilter(data);
   };
 
+  // eslint-disable-next-line
   const filterProducts = (category) => {
     const updatedItems = data.filter((item) => item.product_type === category);
     console.log(updatedItems);

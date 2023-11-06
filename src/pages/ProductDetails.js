@@ -2,9 +2,11 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
 export const ProductDetails = () => {
+  // eslint-disable-next-line
   const params = useParams();
   const [data, setData] = useState({});
-  const [filter, setFilter, show] = useState(data);
+  // eslint-disable-next-line
+  const [filter, setFilter] = useState(data);
 
   useEffect(() => {
     async function fetchDetails() {
@@ -12,11 +14,12 @@ export const ProductDetails = () => {
         `http://makeup-api.herokuapp.com/api/v1/products.json?brand=nyx`
       );
       const json = await response.json();
-      setFilter(json);
+      setData(json);
       console.log(json);
     }
     fetchDetails();
   }, []);
+  // eslint-disable-next-line
   const filterProducts = (category) => {
     const updatedItems = data.filter((item) => item.product_type === category);
     console.log(updatedItems);
