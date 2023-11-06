@@ -3,7 +3,6 @@ import { NavLink } from 'react-router-dom';
 import Logo from '../assets/images/logo.jpg';
 import Cart from '../assets/images/heart cart icon.png';
 //eslint-disable-next-line
-eslint - disable - next - line;
 
 export const Header = () => {
   const activeClass =

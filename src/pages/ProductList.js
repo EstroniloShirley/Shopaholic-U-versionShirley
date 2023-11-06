@@ -20,14 +20,6 @@ export const ProductList = () => {
     setFilter(data);
     console.log(data);
   };
-  // eslint-disable-next-line
-
-  // eslint-disable-next-line
-  const filterProducts = (products) => {
-    const updatedItems = data.filter((item) => item.product_type === products);
-    filterProducts(updatedItems);
-  };
-
   return (
     <main className=" text-center ">
       <section className="container flex flex-wrap max-w-7x1 mx-auto py-7 items-center rounded-lg text-center">
