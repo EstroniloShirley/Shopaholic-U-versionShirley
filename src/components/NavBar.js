@@ -38,7 +38,6 @@ export const NavBar = ({ products }) => {
         <Link
           onClick={() => setFilter(data)}
           className="relative inline-flex items-center w-full px-4 py-2 text-sm font-bold border-b border-gray-200 rounded-t-lg hover:bg-gray-200 hover:text-sky-500 focus:text-sky-500 border-gray-600 hover:bg-gray-600 hover:text-white focus:ring-gray-500 focus:text-blue-900 active:bg-gray-600 "
-          end
         >
           All NYX Products
         </Link>
