@@ -1,18 +1,15 @@
 //eslint-disable-next-line
-eslint - disable - next - line;
-import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+// eslint - disable - next - line
 
 export const Card = ({ data }) => {
   const {
     id,
     name,
     price,
-    description,
-    category,
+
     image_link,
     rating,
-    product_colors,
   } = data;
 
   return (

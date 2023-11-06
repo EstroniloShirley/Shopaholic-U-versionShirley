@@ -1,11 +1,9 @@
-//eslint-disable-next-line
-eslint - disable - next - line;
-
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import Logo from '../assets/images/logo.jpg';
 import Cart from '../assets/images/heart cart icon.png';
-import { Search } from '../pages/Search';
+//eslint-disable-next-line
+eslint - disable - next - line;
 
 export const Header = () => {
   const activeClass =
@@ -13,7 +11,6 @@ export const Header = () => {
 
   const inActiveClass =
     'text-gray-900 dark:text-pink-300  mr-5 border-blue-900 hover:text-pink-600  rounded-lg';
-  const { hidden, setHidden } = useState(true);
 
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -202,7 +199,7 @@ export const Header = () => {
                       </label>
                     </div>
                     <a
-                      href="#"
+                      href="..."
                       class="text-sm text-blue-700 hover:underline dark:text-blue-500"
                     >
                       Lost Password?
@@ -217,7 +214,7 @@ export const Header = () => {
                   <div class="text-sm font-medium text-gray-500 dark:text-gray-300">
                     Not registered?{' '}
                     <a
-                      href="#"
+                      href="..."
                       class="text-blue-700 hover:underline dark:text-blue-500"
                     >
                       Create account

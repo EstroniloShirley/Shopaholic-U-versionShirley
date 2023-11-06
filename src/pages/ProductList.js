@@ -1,8 +1,7 @@
-//eslint-disable-next-line
-eslint - disable - next - line;
-
 import { useState, useEffect } from 'react';
 import { Card } from '../components';
+//eslint-disable-next-line
+eslint - disable - next - line;
 
 export const ProductList = () => {
   const [data, setData] = useState([]);
@@ -19,7 +18,8 @@ export const ProductList = () => {
     setFilter(data);
     console.log(data);
   };
-
+  // eslint-disable-next-line
+  eslint - disable - next - line;
   const filterProducts = (products) => {
     const updatedItems = data.filter((item) => item.product_type === products);
 

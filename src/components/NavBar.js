@@ -1,15 +1,14 @@
+import { useState, useEffect } from 'react';
+import { Card } from '../components';
+import { Search } from '../pages';
+import { Link } from 'react-router-dom';
 //eslint-disable-next-line
 eslint - disable - next - line;
-
-import { useState, useEffect } from 'react';
-import { Link, NavLink } from 'react-router-dom';
-import { Card } from '../components';
-import { Search, ProductList } from '../pages';
 
 export const NavBar = ({ products }) => {
   const [data, setData] = useState([]);
   const [filter, setFilter, show] = useState(data);
-  const [id, title, category, price] = data;
+
   useEffect(() => {
     getBrand();
   }, []);
