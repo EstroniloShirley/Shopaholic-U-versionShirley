@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Hero from '../assets/images/banner nyx.gif';
 import { Search } from './Search';
 
-import { Card } from '../components';
+import { Card, NavBar } from '../components';
 
 export const Home = () => {
   const [data, setData] = useState([]);
@@ -45,6 +45,7 @@ export const Home = () => {
         <div className="bg-pink-500 pt-5 pl-20 pr-20">
           <Search />
           <h1 className="text-center text-3xl font-bold">BEST SELLERS</h1>
+          <NavBar />
           <p className="text-center hover:text-white	">
             <Link to="/products">Shop Now</Link>
           </p>
