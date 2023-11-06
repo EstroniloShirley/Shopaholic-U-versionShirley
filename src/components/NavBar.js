@@ -3,14 +3,16 @@ import { Card } from '../components';
 import { Search } from '../pages';
 import { Link } from 'react-router-dom';
 //eslint-disable-next-line
-eslint - disable - next - line;
 
 export const NavBar = ({ products }) => {
   const [data, setData] = useState([]);
+  // eslint-disable-next-line
   const [filter, setFilter, show] = useState(data);
 
   useEffect(() => {
+    // eslint-disable-next-line
     getBrand();
+    // eslint-disable-next-line
   }, []);
   const getBrand = async () => {
     const response = await fetch(

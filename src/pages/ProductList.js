@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Card } from '../components';
 //eslint-disable-next-line
-eslint - disable - next - line;
 
 export const ProductList = () => {
   const [data, setData] = useState([]);
@@ -9,9 +8,12 @@ export const ProductList = () => {
 
   useEffect(() => {
     getBrand();
+    // eslint-disable-next-line
+    // eslint-disable-next-line
   }, []);
   const getBrand = async () => {
     const response = await fetch(
+      // eslint-disable-next-line
       'http://makeup-api.herokuapp.com/api/v1/products.json?brand=nyx'
     );
     setData(await response.json());
@@ -19,11 +21,11 @@ export const ProductList = () => {
     console.log(data);
   };
   // eslint-disable-next-line
-  eslint - disable - next - line;
+
+  // eslint-disable-next-line
   const filterProducts = (products) => {
     const updatedItems = data.filter((item) => item.product_type === products);
-
-    setFilter(updatedItems);
+    filterProducts(updatedItems);
   };
 
   return (
