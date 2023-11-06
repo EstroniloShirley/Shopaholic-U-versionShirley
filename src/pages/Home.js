@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Hero from '../assets/images/banner nyx.gif';
 import { Search } from './Search';
@@ -6,31 +6,33 @@ import { Search } from './Search';
 import { Card, NavBar } from '../components';
 
 export const Home = () => {
+  // eslint-disable-next-line
   const [data, setData] = useState([]);
+  // eslint-disable-next-line
   const [filter, setFilter] = useState(data);
 
-  // eslint-disable-next-line
-  const GetBrand = async () => {
-    const response = await fetch(
-      'http://makeup-api.herokuapp.com/api/v1/products.json?brand=nyx'
-    );
-    // eslint-disable-next-line
-    useEffect(() => {
-      GetBrand();
-      // eslint-disable-next-line
-    }, []);
+  // // eslint-disable-next-line
+  // const GetBrand = async () => {
+  //   const response = await fetch(
+  //     'http://makeup-api.herokuapp.com/api/v1/products.json?brand=nyx'
+  //   );
+  //   // eslint-disable-next-line
+  //   useEffect(() => {
+  //     GetBrand();
+  //     // eslint-disable-next-line
+  //   }, []);
 
-    setData(await response.json());
-    console.log(data);
-    setFilter(data);
-  };
+  //   setData(await response.json());
+  //   console.log(data);
+  //   setFilter(data);
+  // };
 
-  // eslint-disable-next-line
-  const filterProducts = (category) => {
-    const updatedItems = data.filter((item) => item.product_type === category);
-    console.log(updatedItems);
-    setFilter(updatedItems);
-  };
+  // // eslint-disable-next-line
+  // const filterProducts = (category) => {
+  //   const updatedItems = data.filter((item) => item.product_type === category);
+  //   console.log(updatedItems);
+  //   setFilter(updatedItems);
+  // };
 
   return (
     <main>
@@ -44,7 +46,9 @@ export const Home = () => {
       <div>
         <div className="bg-pink-500 pt-5 pl-20 pr-20">
           <Search />
-          <h1 className="text-center text-3xl font-bold">BEST SELLERS</h1>
+          <h1 className="text-center text-3xl font-bold py-2 px-2">
+            BEST SELLING
+          </h1>
           <NavBar />
           <p className="text-center hover:text-white	">
             <Link to="/products">Shop Now</Link>

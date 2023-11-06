@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Card } from '../components';
+// eslint-disable-next-line
 import { Search } from '../pages';
 import { Link } from 'react-router-dom';
 //eslint-disable-next-line
@@ -30,7 +31,6 @@ export const NavBar = ({ products }) => {
 
   return (
     <main className=" text-center ">
-      <Search />
       <h1 className="text-center text-4xl font-extrabold underline-offset-4	mb-5 leading-relaxed">
         Products
       </h1>
